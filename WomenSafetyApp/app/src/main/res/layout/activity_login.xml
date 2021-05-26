@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="20dp">
+
+    <!--    <ImageView-->
+    <!--        android:layout_width="100dp"-->
+    <!--        android:layout_height="100dp"-->
+    <!--        android:src="@drawable/smart_diet"/>-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_gravity="left"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:singleLine="true"
+        android:text="Welcome Back!"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:singleLine="true"
+        android:text="Login to your account now"
+        android:layout_margin="10dp"
+        android:nextFocusDown="@+id/user_password"
+        android:textColor="@android:color/black" />
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="15dp"
+        android:background="@drawable/shapeemail"
+        android:drawableLeft="@drawable/ic_person_black_24dp"
+        android:drawablePadding="10dp"
+        android:layout_marginTop="20dp"
+        android:hint="Email"
+        android:singleLine="true"
+        android:nextFocusDown="@+id/user_password"
+        android:id="@+id/user_email_id"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black"
+        android:textColorHighlight="@android:color/black"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="15dp"
+        android:id="@+id/user_password"
+        android:background="@drawable/shapeemail"
+        android:drawableLeft="@drawable/ic_lock_black_24dp"
+        android:drawablePadding="10dp"
+        android:hint="Password"
+        android:singleLine="true"
+        android:inputType="textPassword"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black"
+        android:textColorHighlight="@android:color/black"/>
+
+    <Button
+        android:id="@+id/btn_forgot_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="0dp"
+        android:textSize="12dp"
+        android:textColor="@android:color/black"
+        android:background="@android:color/transparent"
+        android:text="Forgot Password ? Click here" />
+
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/shapesignup"
+        android:padding="15dp"
+        android:text="Log In"
+        android:textColor="@android:color/white"
+        app:backgroundTint="@null" />
+
+    <ProgressBar
+        android:id="@+id/pbLoader"
+        style="@style/Base.Widget.AppCompat.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:indeterminate="true"
+        android:theme="@style/AppTheme.ProgressBar"
+        android:visibility="gone"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DON'T HAVE AN ACCOUNT? CLICK HERE"
+        android:padding="15dp"
+        android:id="@+id/btn_sign_up"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="0dp"
+        app:backgroundTint="@null"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:gravity="center_horizontal" />
+
+</LinearLayout>

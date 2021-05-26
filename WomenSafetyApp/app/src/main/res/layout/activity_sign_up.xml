@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:id="@+id/ScrollView01"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:layout_below="@+id/title">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:id="@+id/view_profile_pic"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+
+                        android:layout_width="150dp"
+                        android:layout_gravity="center"
+                        android:layout_height="150dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:id="@+id/profile_pic"
+                            android:layout_gravity="center"
+                            app:civ_border_width="2dp"
+                            app:civ_border_color="#FF000000"/>
+
+                        <ImageView
+                            android:id="@+id/outside_imageview"
+                            android:src="@drawable/profilepic"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:layout_alignTop="@id/profile_pic"
+                            android:layout_alignBottom="@id/profile_pic"
+                            android:layout_alignLeft="@id/profile_pic"
+                            android:layout_alignRight="@id/profile_pic"
+                            android:scaleType="fitXY" />
+                    </RelativeLayout>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/view_visitor_name"
+                    android:layout_below="@+id/view_profile_pic"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:padding="15dp"
+                        android:background="@drawable/shapeemail"
+                        android:drawablePadding="10dp"
+                        android:layout_marginTop="20dp"
+                        android:hint="Name"
+                        android:singleLine="true"
+                        android:id="@+id/user_name"
+                        android:nextFocusDown="@+id/user_mobile_number"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@android:color/black"
+                        android:textColorHighlight="@android:color/black"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:padding="15dp"
+                        android:maxLength="10"
+                        android:background="@drawable/shapeemail"
+                        android:drawablePadding="10dp"
+                        android:layout_marginTop="20dp"
+                        android:hint="Enter Mobile Number"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:id="@+id/user_mobile_number"
+                        android:nextFocusDown="@+id/user_aadhar_number"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@android:color/black"
+                        android:textColorHighlight="@android:color/black"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:padding="15dp"
+                        android:background="@drawable/shapeemail"
+                        android:drawablePadding="10dp"
+                        android:layout_marginTop="20dp"
+                        android:inputType="number"
+                        android:hint="Enter Aadhar Number"
+                        android:singleLine="true"
+                        android:id="@+id/user_aadhar_number"
+                        android:nextFocusDown="@+id/user_email"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@android:color/black"
+                        android:textColorHighlight="@android:color/black"/>
+
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:padding="15dp"
+                        android:background="@drawable/shapeemail"
+                        android:drawablePadding="10dp"
+                        android:layout_marginTop="20dp"
+                        android:hint="Enter Email"
+                        android:singleLine="true"
+                        android:nextFocusDown="@+id/user_password"
+                        android:id="@+id/user_email"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@android:color/black"
+                        android:textColorHighlight="@android:color/black"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:padding="15dp"
+                        android:background="@drawable/shapeemail"
+                        android:drawablePadding="10dp"
+                        android:layout_marginTop="20dp"
+                        android:hint="Enter Password"
+                        android:nextFocusDown="@+id/user_emergency_contact"
+                        android:inputType="textPassword"
+                        android:singleLine="true"
+                        android:id="@+id/user_password"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@android:color/black"
+                        android:textColorHighlight="@android:color/black"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:padding="15dp"
+                        android:maxLength="10"
+                        android:background="@drawable/shapeemail"
+                        android:drawablePadding="10dp"
+                        android:layout_marginTop="20dp"
+                        android:hint="Enter Emergency Contact"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:id="@+id/user_emergency_contact"
+                        android:nextFocusDown="@+id/vendor_aadhar_number"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@android:color/black"
+                        android:textColorHighlight="@android:color/black"/>
+
+                    <Button
+                        android:id="@+id/btn_submit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/shapesignup"
+                        android:padding="15dp"
+                        android:text="Submit"
+                        app:backgroundTint="@null"
+                        android:textColor="@android:color/white" />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/nav_header"/>
+
+    <ProgressBar
+        android:id="@+id/pbLoader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:theme="@style/AppTheme.ProgressBar"
+        android:minWidth="50dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"/>
+
+
+</RelativeLayout>
+
+
